@@ -20,14 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf711c26-bbfc-4b39-9311-4e7584a62b89" name="Default Changelist" comment="draw path">
-      <change afterPath="$PROJECT_DIR$/src/finding/DFSSeeker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finding/Seeker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/building/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/building/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/building/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/building/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/FieldJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/FieldJPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/GuiMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/GuiMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/PathFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RunningPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MazeView.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/MazeView.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +37,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1e4oXlfagPlJ3Ir2DBZIkd03waB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -56,6 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
@@ -130,6 +125,7 @@
       <workItem from="1599154986478" duration="8072000" />
       <workItem from="1599194653801" duration="2967000" />
       <workItem from="1599197941806" duration="125000" />
+      <workItem from="1599198916879" duration="110000" />
     </task>
     <task id="LOCAL-00001" summary="build maze">
       <created>1593634311177</created>
@@ -237,22 +233,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599139118993" />
-    <state width="1865" height="277" key="GridCell.Tab.0.bottom" timestamp="1599198067465">
+    <state width="1865" height="277" key="GridCell.Tab.0.bottom" timestamp="1599199026695">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599198067465" />
-    <state width="1865" height="277" key="GridCell.Tab.0.center" timestamp="1599198067464">
+    <state width="1865" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599199026695" />
+    <state width="1865" height="277" key="GridCell.Tab.0.center" timestamp="1599199026695">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599198067464" />
-    <state width="1865" height="277" key="GridCell.Tab.0.left" timestamp="1599198067464">
+    <state width="1865" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599199026695" />
+    <state width="1865" height="277" key="GridCell.Tab.0.left" timestamp="1599199026695">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599198067464" />
-    <state width="1865" height="277" key="GridCell.Tab.0.right" timestamp="1599198067465">
+    <state width="1865" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599199026695" />
+    <state width="1865" height="277" key="GridCell.Tab.0.right" timestamp="1599199026695">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599198067465" />
+    <state width="1865" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599199026695" />
     <state width="1865" height="330" key="GridCell.Tab.1.bottom" timestamp="1599141192184">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
