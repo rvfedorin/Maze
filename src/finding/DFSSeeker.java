@@ -4,8 +4,6 @@ import building.Maze;
 import building.Position;
 import com.sun.istack.internal.Nullable;
 import gui.CanDrawItSelf;
-import gui.Cell;
-import gui.FieldJPanel;
 import gui.RunningPoint;
 
 import java.awt.*;
@@ -52,6 +50,7 @@ public class DFSSeeker extends Seeker {
 
             if (currentPoint.getMyPosition().isSamePlace(exit)) {
                 hasWay = true;
+                currentPoint.setType(RunningPoint.TypePosition.END);
                 break;
             }
 
@@ -59,6 +58,7 @@ public class DFSSeeker extends Seeker {
             List<RunningPoint> pointsToMove = canMoveTo(currentPoint.getMyPosition(), discoverField);
             if (pointsToMove.size() == 1) {
                 nextChoose.push(pointsToMove.get(0));
+                currentPoint.setType(RunningPoint.TypePosition.FLAT);
             } else if (pointsToMove.size() > 1) {
                 currentPoint.setType(RunningPoint.TypePosition.INTERSECTION);
                 currentPoint.setWaysFromMe(pointsToMove.size());
@@ -84,8 +84,8 @@ public class DFSSeeker extends Seeker {
             int cellLeft = getMaze().getField()[position.getToDown()][position.getToRight() - 1];
             int visitedCell = visited[position.getToDown()][position.getToRight() - 1];
             if ((cellLeft != 1 && cellLeft != 3) && visitedCell < 1) {
-                Position newPostion = new Position(position.getToDown(), position.getToRight() - 1);
-                freeMove.add(new RunningPoint(newPostion, true, Color.green));
+                Position newPosition = new Position(position.getToDown(), position.getToRight() - 1);
+                freeMove.add(new RunningPoint(newPosition, true, Color.green));
             }
         } // to left
 
@@ -93,8 +93,8 @@ public class DFSSeeker extends Seeker {
             int cellTop = getMaze().getField()[position.getToDown() - 1][position.getToRight()];
             int visitedCell = visited[position.getToDown() - 1][position.getToRight()];
             if ((cellTop != 2 && cellTop != 3) && visitedCell < 1) {
-                Position newPostion = new Position(position.getToDown() - 1, position.getToRight());
-                freeMove.add(new RunningPoint(newPostion, true, Color.green));
+                Position newPosition = new Position(position.getToDown() - 1, position.getToRight());
+                freeMove.add(new RunningPoint(newPosition, true, Color.green));
             }
         } // to up
 
@@ -102,8 +102,8 @@ public class DFSSeeker extends Seeker {
             int cellRight = getMaze().getField()[position.getToDown()][position.getToRight()];
             int visitedCell = visited[position.getToDown()][position.getToRight() + 1];
             if ((cellRight != 1 && cellRight != 3) && visitedCell < 1) {
-                Position newPostion = new Position(position.getToDown(), position.getToRight() + 1);
-                freeMove.add(new RunningPoint(newPostion, true, Color.green));
+                Position newPosition = new Position(position.getToDown(), position.getToRight() + 1);
+                freeMove.add(new RunningPoint(newPosition, true, Color.green));
             }
         } // to right
 
@@ -111,8 +111,8 @@ public class DFSSeeker extends Seeker {
             int cellDown = getMaze().getField()[position.getToDown()][position.getToRight()];
             int visitedCell = visited[position.getToDown() + 1][position.getToRight()];
             if ((cellDown != 2 && cellDown != 3) && visitedCell < 1) {
-                Position newPostion = new Position(position.getToDown() + 1, position.getToRight());
-                freeMove.add(new RunningPoint(newPostion, true, Color.green));
+                Position newPosition = new Position(position.getToDown() + 1, position.getToRight());
+                freeMove.add(new RunningPoint(newPosition, true, Color.green));
             }
         } // to down
 

@@ -21,7 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="cf711c26-bbfc-4b39-9311-4e7584a62b89" name="Default Changelist" comment="draw path">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MazeView.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/MazeView.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Maze/finding/DFSSeeker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Maze/finding/DFSSeeker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finding/DFSSeeker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finding/DFSSeeker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/FieldJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/FieldJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/GuiMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/GuiMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/RunningPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RunningPoint.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +57,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
@@ -126,6 +132,8 @@
       <workItem from="1599194653801" duration="2967000" />
       <workItem from="1599197941806" duration="125000" />
       <workItem from="1599198916879" duration="110000" />
+      <workItem from="1599477112044" duration="1247000" />
+      <workItem from="1599483604624" duration="6179000" />
     </task>
     <task id="LOCAL-00001" summary="build maze">
       <created>1593634311177</created>
@@ -195,6 +203,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="build maze" />
     <MESSAGE value="nom" />
     <MESSAGE value="gui" />
@@ -205,10 +216,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="draw path" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="718" y="165" key="#com.intellij.ide.util.MemberChooser" timestamp="1599162770944">
+    <state x="718" y="165" key="#com.intellij.ide.util.MemberChooser" timestamp="1599488846396">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="718" y="165" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599162770944" />
+    <state x="718" y="165" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599488846396" />
     <state x="770" y="427" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1599136464162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -233,22 +244,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599139118993" />
-    <state width="1865" height="277" key="GridCell.Tab.0.bottom" timestamp="1599199026695">
+    <state width="1865" height="277" key="GridCell.Tab.0.bottom" timestamp="1599489625085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599199026695" />
-    <state width="1865" height="277" key="GridCell.Tab.0.center" timestamp="1599199026695">
+    <state width="1865" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599489625085" />
+    <state width="1865" height="277" key="GridCell.Tab.0.center" timestamp="1599489625085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599199026695" />
-    <state width="1865" height="277" key="GridCell.Tab.0.left" timestamp="1599199026695">
+    <state width="1865" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599489625085" />
+    <state width="1865" height="277" key="GridCell.Tab.0.left" timestamp="1599489625085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599199026695" />
-    <state width="1865" height="277" key="GridCell.Tab.0.right" timestamp="1599199026695">
+    <state width="1865" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599489625085" />
+    <state width="1865" height="277" key="GridCell.Tab.0.right" timestamp="1599489625085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599199026695" />
+    <state width="1865" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599489625085" />
     <state width="1865" height="330" key="GridCell.Tab.1.bottom" timestamp="1599141192184">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -269,9 +280,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="663" y="150" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596962122671" />
-    <state x="344" y="78" key="SettingsEditor" timestamp="1593621167923">
+    <state x="344" y="78" key="SettingsEditor" timestamp="1599477254482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="344" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593621167923" />
+    <state x="344" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599477254482" />
   </component>
 </project>

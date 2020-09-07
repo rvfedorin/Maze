@@ -54,10 +54,7 @@ public class GuiMain extends JFrame {
 
         JButton findWayButton = new JButton("Find the exit");
         findWayButton.addActionListener(event -> {
-            new Thread(() -> {
-                field.canRun();
-                field.findTheWay();
-            }).start();
+            new Thread(field::findTheWay).start();
         });
 
         JButton stopFindWayButton = new JButton("Stop");

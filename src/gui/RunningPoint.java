@@ -10,7 +10,18 @@ import java.awt.*;
  * Time: 14:56
  */
 public class RunningPoint implements CanDrawItSelf {
-    public enum TypePosition{DEAD_END, INTERSECTION, FLAT}
+    public enum TypePosition{DEAD_END("dead-end"), END("end"), INTERSECTION("intersection"), FLAT("flat");
+        String name;
+
+        TypePosition(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            return name;
+        }
+    }
 
     private Position myPosition;
     private Color color;
@@ -100,6 +111,7 @@ public class RunningPoint implements CanDrawItSelf {
                 "position=" + myPosition +
                 ", color=" + color +
                 ", roundSize=" + roundSize +
+                ", type=" + type +
                 '}';
     }
 

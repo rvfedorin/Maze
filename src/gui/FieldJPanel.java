@@ -17,6 +17,8 @@ import java.util.Deque;
  * Time: 15:35
  */
 public class FieldJPanel extends JPanel {
+    public enum States {START, RUN, STOP, FINISH}
+
     public final static int startOffsetX = 20;
     public final static int startOffsetY = 20;
     private int x, y;
@@ -25,11 +27,12 @@ public class FieldJPanel extends JPanel {
     private ArrayList<CanDrawItSelf> toDrawPath;
     private ArrayList<CanDrawItSelf> allPathSteps;
     private Deque<RunningPoint> doneWay;
-    private volatile boolean stop = false;
+    //    private volatile boolean stop = false;
     private volatile int sleepTimeBeforeNextStep = 50;
-    private boolean running = false;
+    //    private boolean running = false;
     private CanDrawItSelf stoppedPosition;
-    private boolean goBack = false;
+        private boolean goBack = false;
+    private States state = States.START;
 
     public void setX(int x) {
         this.x = x * Cell.CELL_SIZE;
@@ -121,7 +124,7 @@ public class FieldJPanel extends JPanel {
     }
 
     public void findTheWay() {
-        if (running) return; // we are already running
+        if (state != States.START && state != States.STOP) return; // we are already running
 
         int startId = -1;
         Seeker seeker = new DFSSeeker(maze);
@@ -133,9 +136,8 @@ public class FieldJPanel extends JPanel {
             startId = allPathSteps.indexOf(stoppedPosition);
         }
 
-        running = true;
+        state = States.RUN;
         stepDrawingPath(startId);
-        running = false;
     } // findTheWay
 
     private void stepDrawingPath(int startPosition) {
@@ -144,31 +146,29 @@ public class FieldJPanel extends JPanel {
         RunningPoint lastStep = null;
         RunningPoint step = null;
 
-        for (int i = startPosition; i < allPathSteps.size();) {
-            if (stop) {
-                if (running) {
-                    stoppedPosition = step;
-                } else {
-                    stoppedPosition = null;
-                }
+        for (int i = startPosition; i < allPathSteps.size(); ) {
+            if (state == States.STOP) {
+                stoppedPosition = step;
                 break;
             }
 
             if (goBack) {
-                if(!doneWay.isEmpty()) {
+                if(step == null) { // was stopped
+                    step = (RunningPoint) allPathSteps.get(i);
+                }
+                if (!doneWay.isEmpty()) {
                     RunningPoint stepBack = doneWay.pop();
-
                     if (stepBack.getType() == RunningPoint.TypePosition.INTERSECTION
-                            && step != null
                             && step.getFromIntersection() != null
-                            && step.getFromIntersection().getMyPosition().isSamePlace(stepBack.getMyPosition()))
-                    {
+                            && step.getFromIntersection().getMyPosition().isSamePlace(stepBack.getMyPosition())) {
                         goBack = false; // found the start intersection
                         toDrawPath.add(step);
                         doneWay.push(stepBack);
                         doneWay.push(step);
-                        lastStep.setRoundMain(false);
-                        lastStep.setColor(Color.red);
+                        if(lastStep != null) { // after it was stopped it may be null
+                            lastStep.setRoundMain(false);
+                            lastStep.setColor(Color.red);
+                        }
                         lastStep = step;
                     } else {
                         stepBack.setColor(Color.blue);
@@ -179,8 +179,8 @@ public class FieldJPanel extends JPanel {
                         }
                         lastStep = stepBack;
                     }
-                    stepBack.setWaysFromMe(stepBack.getWaysFromMe()-1);
-                    if(stepBack.getWaysFromMe() < 1) {
+                    stepBack.setWaysFromMe(stepBack.getWaysFromMe() - 1);
+                    if (stepBack.getWaysFromMe() < 1) {
                         stepBack.setColor(Color.red);
                         stepBack.setRoundMain(false);
                     }
@@ -195,9 +195,12 @@ public class FieldJPanel extends JPanel {
                     if (lastStep.getType() == RunningPoint.TypePosition.DEAD_END) {
                         lastStep.setColor(Color.red);
                         goBack = true;
+                        if(step.getType() == RunningPoint.TypePosition.END) {
+                            i--; // if the step is finish we have'n next loop
+                        }
                     }
                 }
-                if(!goBack) {
+                if (!goBack) {
                     toDrawPath.add(step);
                     doneWay.push(step);
                     lastStep = step;
@@ -211,17 +214,13 @@ public class FieldJPanel extends JPanel {
             }
 
             repaint();
-
         } // for all path
     }
 
     public void stopRunning() {
-        stop = true;
+        state = States.STOP;
     }
 
-    public void canRun() {
-        stop = false;
-    }
 
     public void resetDrawingAndRepaint() {
         resetField();
@@ -229,8 +228,7 @@ public class FieldJPanel extends JPanel {
     }
 
     private void resetField() {
-        running = false;
-        stop = true;
+        state = States.START;
         goBack = false;
         stoppedPosition = null;
         allPathSteps = new ArrayList<>();
