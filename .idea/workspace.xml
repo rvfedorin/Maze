@@ -19,15 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf711c26-bbfc-4b39-9311-4e7584a62b89" name="Default Changelist" comment="draw path">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cf711c26-bbfc-4b39-9311-4e7584a62b89" name="Default Changelist" comment="fix if we have last step as finish and previous step dead-end &#10;and some refactoring">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Maze/finding/DFSSeeker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Maze/finding/DFSSeeker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finding/DFSSeeker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finding/DFSSeeker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/FieldJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/FieldJPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/GuiMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/GuiMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RunningPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RunningPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Maze/gui/FieldJPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Maze/gui/FieldJPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Maze/gui/GuiMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Maze/gui/GuiMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Maze/gui/RunningPoint$TypePosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Maze/gui/RunningPoint$TypePosition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Maze/gui/RunningPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Maze/gui/RunningPoint.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
   </component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
@@ -101,7 +99,7 @@
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\wolf\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -133,7 +131,9 @@
       <workItem from="1599197941806" duration="125000" />
       <workItem from="1599198916879" duration="110000" />
       <workItem from="1599477112044" duration="1247000" />
-      <workItem from="1599483604624" duration="6179000" />
+      <workItem from="1599483604624" duration="6415000" />
+      <workItem from="1599567863447" duration="677000" />
+      <workItem from="1599568683585" duration="527000" />
     </task>
     <task id="LOCAL-00001" summary="build maze">
       <created>1593634311177</created>
@@ -184,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596974161718</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix if we have last step as finish and previous step dead-end &#10;and some refactoring">
+      <created>1599490065449</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1599490065449</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +220,8 @@
     <MESSAGE value="Create field in maze moved to building.&#10;Created interface to add to list of GraphElements." />
     <MESSAGE value="rollback" />
     <MESSAGE value="draw path" />
-    <option name="LAST_COMMIT_MESSAGE" value="draw path" />
+    <MESSAGE value="fix if we have last step as finish and previous step dead-end &#10;and some refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix if we have last step as finish and previous step dead-end &#10;and some refactoring" />
   </component>
   <component name="WindowStateProjectService">
     <state x="718" y="165" key="#com.intellij.ide.util.MemberChooser" timestamp="1599488846396">
@@ -244,22 +252,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599139118993" />
-    <state width="1865" height="277" key="GridCell.Tab.0.bottom" timestamp="1599489625085">
+    <state width="1865" height="277" key="GridCell.Tab.0.bottom" timestamp="1599490070376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599489625085" />
-    <state width="1865" height="277" key="GridCell.Tab.0.center" timestamp="1599489625085">
+    <state width="1865" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599490070376" />
+    <state width="1865" height="277" key="GridCell.Tab.0.center" timestamp="1599490070376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599489625085" />
-    <state width="1865" height="277" key="GridCell.Tab.0.left" timestamp="1599489625085">
+    <state width="1865" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599490070376" />
+    <state width="1865" height="277" key="GridCell.Tab.0.left" timestamp="1599490070376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599489625085" />
-    <state width="1865" height="277" key="GridCell.Tab.0.right" timestamp="1599489625085">
+    <state width="1865" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599490070376" />
+    <state width="1865" height="277" key="GridCell.Tab.0.right" timestamp="1599490070376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599489625085" />
+    <state width="1865" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599490070376" />
     <state width="1865" height="330" key="GridCell.Tab.1.bottom" timestamp="1599141192184">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -280,9 +288,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="663" y="150" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596962122671" />
-    <state x="344" y="78" key="SettingsEditor" timestamp="1599477254482">
+    <state x="197" y="34" key="SettingsEditor" timestamp="1599569213691">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="344" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599477254482" />
+    <state x="197" y="34" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599569213691" />
+    <state x="412" y="399" key="VCS.EditChangelistDialog" timestamp="1599567947897">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="412" y="399" key="VCS.EditChangelistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599567947897" />
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1599569178539">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599569178539" />
   </component>
 </project>
